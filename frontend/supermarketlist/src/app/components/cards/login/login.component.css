@@ -1,0 +1,66 @@
+.login-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px;
+    width: 400px;
+    height: 400px;
+}
+
+.login-card .card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+#icon{
+    font-size: 75px;
+    height: 75px;
+    width: 75px;
+    margin-top: 10px;
+}
+
+.login-card .form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-card .form-input .email-input {
+    width: 90%;
+}
+
+.login-card .form-input .password-input {
+    width: 90%;
+}
+
+.login-card .form-button .card-button-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#signup-button {
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+}
+
+#signin-button {
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+}
+
+#signup-button:hover {
+    color: white;
+    background: aqua;
+}
+
+#signin-button:hover {
+    color: white;
+    background: greenyellow;
+}

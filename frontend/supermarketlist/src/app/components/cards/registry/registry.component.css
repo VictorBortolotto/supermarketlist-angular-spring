@@ -1,0 +1,75 @@
+.registry-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px;
+    width: 400px;
+    height: 400px;
+}
+
+.registry-card .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#divider-header{
+    margin-top: 40px;
+    background: black;
+}
+
+.registry-card .form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.registry-card .form-input .email-input {
+    width: 90%;
+}
+
+.registry-card .form-input .nickname-input {
+    width: 90%;
+}
+
+.registry-card .form-input .password-input {
+    width: 90%;
+}
+
+.registry-card .form-input .confirm-password-input {
+    width: 90%;
+}
+
+.registry-card .form-button .card-button-actions {
+    display: flex;
+    justify-content: center;
+}
+
+#confirm-button {
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+}
+
+#cancel-button {
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+}
+
+#confirm-button:hover {
+    color: white;
+    background: greenyellow;
+}
+
+#cancel-button:hover {
+    color: white;
+    background: red;
+}
+
+#divider-footer{
+    margin-top: 360px;
+    background: black;
+}

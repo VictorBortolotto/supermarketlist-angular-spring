@@ -1,0 +1,22 @@
+<mat-card class="login-card">
+  <mat-card-header class="card-header">
+    <mat-card-title>LOGIN</mat-card-title>
+    <mat-icon id="icon" aria-hidden="false">account_circle</mat-icon>
+  </mat-card-header>
+  <form class="form-input">
+    <mat-form-field class="email-input">
+      <mat-label>E-mail</mat-label>
+      <input id="email" matInput type="email" placeholder="Email" [(ngModel)]="signin.email" name="email">
+    </mat-form-field>
+    <mat-form-field class="password-input">
+      <mat-label>Password</mat-label>
+      <input id="password" matInput type="Password" placeholder="password" [(ngModel)]="signin.password" name="password">
+    </mat-form-field>
+  </form>
+  <form class="form-button">
+    <mat-card-actions class="card-button-actions">
+      <button id="signin-button" mat-button (click)="login()">SIGNIN</button>
+      <button id="signup-button" mat-button (click)="signup()">SIGNUP</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

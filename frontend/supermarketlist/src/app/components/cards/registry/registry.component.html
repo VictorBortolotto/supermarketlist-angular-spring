@@ -1,0 +1,31 @@
+<mat-card class="registry-card">
+    <mat-card-header class="card-header">
+        <mat-card-title>REGISTRY</mat-card-title>
+        <mat-divider id="divider-header"></mat-divider>
+    </mat-card-header>
+    <form class="form-input" action="">
+        <mat-form-field class="nickname-input">
+            <mat-label>Nickname</mat-label>
+            <input id="nickname" matInput type="text" placeholder="Nickname" [(ngModel)]="registry.nickname" name="nickname">
+        </mat-form-field>
+        <mat-form-field class="email-input">
+            <mat-label>E-mail</mat-label>
+            <input id="email" matInput type="email" placeholder="Email" [(ngModel)]="registry.email" name="email">
+        </mat-form-field>
+        <mat-form-field class="password-input">
+            <mat-label>Password</mat-label>
+            <input id="password" matInput type="Password" placeholder="password" [(ngModel)]="registry.password" name="password">
+        </mat-form-field>
+        <mat-form-field class="confirm-password-input">
+            <mat-label>Confirm Password</mat-label>
+            <input id="confirm-password" matInput [(ngModel)]="registry.confirmPassword" type="Password" placeholder="Confirm Password"  name="confirmPassword">
+        </mat-form-field>
+    </form>
+    <form class="form-button">
+        <mat-card-actions class="card-button-actions">
+            <button id="confirm-button" mat-button (click)="submit()">CONFIRM</button>
+            <button id="cancel-button" mat-button (click)="cancel()">CANCEL</button>
+        </mat-card-actions>
+    </form>
+    <mat-divider id="divider-footer"></mat-divider>
+</mat-card>
