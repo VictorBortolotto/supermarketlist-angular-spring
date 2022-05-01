@@ -5,14 +5,15 @@
     border: none;
     border-right: 1px solid;
     box-shadow: 2px 2px black;
-    height: 100vh;
+    height: 100%;
     width: 150px;
 }
 
 .sidebar .content{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vh;
+    height: 100vh;
 }
 
 #menu-button {
@@ -22,6 +23,12 @@
 }
 
 #home-button {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0px;
+}
+
+#products-button {
     display: flex;
     align-items: flex-start;
     border-radius: 0px;
@@ -45,6 +52,11 @@
 }
 
 #home-button:hover {
+    background: greenyellow;
+    color: white;
+}
+
+#products-button:hover {
     background: greenyellow;
     color: white;
 }

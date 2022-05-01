@@ -1,15 +1,21 @@
 <mat-sidenav-container class="sidebar">
     <mat-sidenav></mat-sidenav>
     <mat-sidenav-content class="content">
-        <button mat-button id="home-button">
+        <button mat-button id="home-button" (click)="goHome()">
             <mat-icon>
                 home
             </mat-icon>
             <span>Home</span>
         </button>
+        <button mat-button id="products-button" (click)="goProductsList()">
+            <mat-icon>
+                shopping_basket
+            </mat-icon>
+            <span>Products</span>
+        </button>
         <button mat-button id="list-button">
             <mat-icon>
-                list
+                shopping_cart
             </mat-icon>
             <span>Shopping List</span>
         </button>

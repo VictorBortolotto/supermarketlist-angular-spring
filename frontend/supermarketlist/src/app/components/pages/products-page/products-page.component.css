@@ -1,0 +1,39 @@
+.products {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(to right, lightblue, greenyellow);
+}
+
+.products .content {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding: 5px 5px;
+}
+
+.products .content .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: 1px solid; 
+    border-radius: 10px; 
+    background-color: white;
+}
+
+.products .content .list {
+    display: flex; 
+}
+
+.products .content .list .item-list {
+    display: flex; 
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    height: 55px;  
+    border: 1px solid; 
+    border-radius: 10px; 
+    background-color: white;
+}
+

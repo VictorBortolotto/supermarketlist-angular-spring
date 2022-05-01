@@ -18,7 +18,7 @@ export class RegistryComponent implements OnInit {
     confirmPassword: ''
   }
 
-  constructor(private router: Router, private snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }

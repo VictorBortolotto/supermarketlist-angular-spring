@@ -13,7 +13,8 @@ export const SigninService = (email: string, password: string) => {
         }),
     }).then(async (response) => {
         const data = await response.json();
-        if(data.accessToken){
+        
+        if(data.token){
             localStorage.setItem('user', JSON.stringify(data))
         }
         

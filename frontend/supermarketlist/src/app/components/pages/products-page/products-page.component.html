@@ -1,0 +1,15 @@
+<div class="products">
+    <app-sidebar-menu></app-sidebar-menu>
+    <div class="content">
+        <div class="products-list">
+            <div class="pagination">
+                <pagination-controls (pageChange)="pages.initialPage = $event" previousLabel="Aterior" nextLabel="Próximo" ></pagination-controls>
+            </div>    
+            <mat-list role="list" class="list" *ngFor="let product of products | paginate: {itemsPerPage: pages.pageCount, currentPage: pages.initialPage}">
+                <mat-list-item role="listitem" class="item-list" >
+                    {{product.id}} - {{product.name}}
+                </mat-list-item>
+            </mat-list> 
+        </div>
+    </div>
+</div>
