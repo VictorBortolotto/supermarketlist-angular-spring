@@ -13,8 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "product")
-public class Product {
+@Table(name = "shopping_list")
+public class ShoppingList {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,29 +23,25 @@ public class Product {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "status")
+    private boolean status;
+
     @ManyToMany
     @JoinTable(
         name = "product_shopping_list",
-        joinColumns = @JoinColumn(name = "id_product"),
-        inverseJoinColumns = @JoinColumn(name = "id_shopping_list")
+        joinColumns = @JoinColumn(name = "id_shopping_list"),
+        inverseJoinColumns = @JoinColumn(name = "id_product")
     )
-    private List<Product> product;
-    
-    public Product(long id, String name) {
-        this.id = id;
+    private List<ShoppingList> shoppingListProduct;
+
+    public ShoppingList() {
+    }
+
+    public ShoppingList(String name, boolean status) {
         this.name = name;
-    }
-    
-    public Product() {
+        this.status = status;
     }
 
-    public List<Product> getProduct() {
-        return product;
-    }
-
-    public void setProduct(List<Product> product) {
-        this.product = product;
-    }
 
     public long getId() {
         return id;
@@ -61,6 +57,14 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
 }

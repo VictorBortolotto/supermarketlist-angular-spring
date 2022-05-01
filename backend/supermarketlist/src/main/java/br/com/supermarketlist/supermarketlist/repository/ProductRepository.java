@@ -1,16 +1,21 @@
 package br.com.supermarketlist.supermarketlist.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import br.com.supermarketlist.supermarketlist.model.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    
     @Query(
-        value = "select p.* from user u, itens_list il, product p where u.id = il.id_user and p.id = il.id_product",
+        value = "select * from product",
         nativeQuery = true
     )
-    Iterable<Product> findAllProducts();
+    List<Product> findAllProducts();
 
+    List<Product> findProductById(@Param("id") long id);
+
+    List<Product> findProductByName(@Param("name") String name);
 }

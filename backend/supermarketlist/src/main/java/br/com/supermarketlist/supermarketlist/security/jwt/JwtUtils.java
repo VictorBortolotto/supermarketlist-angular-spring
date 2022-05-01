@@ -29,9 +29,9 @@ public class JwtUtils {
 
     public String generateJwtToken(Authentication authentication){
         UserDetailsImpl userDetailsImpl = (UserDetailsImpl) authentication.getPrincipal();
-
+        
         return Jwts.builder()
-        .setSubject((userDetailsImpl.getUsername()))
+        .setSubject((userDetailsImpl.getEmail()))
         .setExpiration(new Date(new Date().getTime() + jwtExpirationMs))
         .signWith(SignatureAlgorithm.HS512, jwtSecret)
         .compact();
